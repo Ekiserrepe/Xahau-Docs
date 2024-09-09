@@ -19,5 +19,5 @@ La siguiente tabla enumera todas las codificaciones que Xahau utiliza:
 
 * Codificación de Direcciones - información detallada sobre la codificación de direcciones.
 * Claves Criptográficas - tipos de claves criptográficas en Xahau y cómo se utilizan.
-* [Referencia de wallet_propose][método wallet_propose] - Método API para generar claves de cuenta.
-* [Referencia de validation_create][método validation_create] - Método API para generar claves de validador.
+* \[Referencia\_de\_wallet_propose]\[método\_wallet_propose] - Método API para generar claves de cuenta.
+* \[Referencia\_de\_validation_create]\[método\_validation_create] - Método API para generar claves de validador.

@@ -46,7 +46,7 @@ Un objeto `HookDefinition` tiene los siguientes campos:
 | `ReferenceCount`  | String    | UInt64              | Sí       | El número de referencias al hook.                                                                             |
 | `Fee`             | String    | Amount              | Sí       | La tarifa por ejecutar el hook.                                                                                   |
 | `HookCallbackFee` | String    | Amount              | No        | La tarifa por ejecutar la función de callback del hook.                                                               |
-| `LedgerEntryType` | String    | UInt16              | Sí       | El valor `0x0043`, asignado a la cadena `HookDefinition`, indica que este objeto es un objeto HookDefinition. |
+| `LedgerEntryType` | String    | UInt16              | Sí       | El valor `0x0043`, asignado al string `HookDefinition`, indica que este objeto es un objeto HookDefinition. |
 
 #### Formato de ID de Definición de Hook
 

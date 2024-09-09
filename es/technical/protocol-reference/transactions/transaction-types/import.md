@@ -41,7 +41,7 @@ _(Añadido por la \[enmienda Import]\[].)_
 _Se recomienda que si utiliza una `SignersList` o `RegularKey` para firmar sus transacciones, que asegure sus cuentas **PRIMERO** antes de intentar B2M XAH_._
 
 * Si la transacción interna (xpop) es `AccountSet`, los flags existentes en la mainet serán transferidos a la nueva red.
-* Si la transacción interna (xpop) es `SetRegularKey` con el campo `RegularKey` omitido o vacío, y no existe una lista de firmantes para la cuenta, entonces la bandera `lsfDisableMaster` se establecerá en la cuenta.
+* Si la transacción interna (xpop) es `SetRegularKey` con el campo `RegularKey` omitido o vacío, y no existe una lista de firmantes para la cuenta, entonces el flag `lsfDisableMaster` se establecerá en la cuenta.
 * Si la transacción interna (xpop) es `SetRegularKey`, entonces la bandera `lsfPasswordSpent` se establecerá en la cuenta.
 * `TicketSequence` no está disponible en `Import`.
 

@@ -1,6 +1,6 @@
 # Metadatos de Transacción
 
-Los metadatos de transacción son una sección de datos que se añaden a una transacción después de ser procesada. Cualquier transacción que se incluya en un libro mayor tiene metadatos, independientemente de si es exitosa o no. Los metadatos de la transacción describen en detalle el resultado de la transacción.
+Los metadatos de transacción son una sección de datos que se añaden a una transacción después de ser procesada. Cualquier transacción que se incluya en un ledger tiene metadatos, independientemente de si es exitosa o no. Los metadatos de la transacción describen en detalle el resultado de la transacción.
 
 **Advertencia:** Los cambios descritos en los metadatos de la transacción solo son finales si la transacción está en una versión validada del ledger.
 

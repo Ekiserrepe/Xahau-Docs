@@ -30,7 +30,7 @@ Usa el formato apropiado para el tipo de moneda que deseas especificar:
 
 #### Cantidades de XAH
 
-Para especificar una cantidad de XAH, utiliza un String Number (Número de Cadena) que indique drops de XAH, donde cada drop equivale a 0.000001 XAH. Por ejemplo, para especificar 13.1 XAH:
+Para especificar una cantidad de XAH, utiliza un String Number (Número de Cadena) que indique _drops_ de XAH, donde cada drop equivale a 0.000001 XAH. Por ejemplo, para especificar 13.1 XAH:
 
 ```
 "13100000"

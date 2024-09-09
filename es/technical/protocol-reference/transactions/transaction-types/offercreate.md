@@ -1,9 +1,6 @@
 ---
 description: >-
   Una transacción OfferCreate coloca una [Oferta](offers.html) en el [exchange descentralizado](decentralized-exchange.html).
-  
-  An OfferCreate transaction places an [Offer](offers.html) in the
-  [decentralized exchange](decentralized-exchange.html).
 ---
 
 # OfferCreate
@@ -56,7 +53,7 @@ Las transacciones del tipo OfferCreate admiten valores adicionales en el campo `
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `temINVALID_FLAG`        | Ocurre si la transacción especifica tanto `tfImmediateOrCancel` como `tfFillOrKill`.                                                                                                                                                                                                                                                                          |
 | `tecEXPIRED`             | Ocurre si la transacción especifica un tiempo de `Expiration` que ya ha pasado.                                                                                                                                                                                                                                                                           |
-| `tecKILLED`              | Ocurre si la transacción especifica `tfFillOrKill` y no se puede llenar la cantidad completa. Si la _\[Enmienda ImmediateOfferKilled]\[]_ está habilitada, este código de resultado también ocurre cuando la transacción especifica `tfImmediateOrCancel` y se ejecuta sin mover fondos (anteriormente, esto devolvía `tesSUCCESS`).                                       |
+| `tecKILLED`              | Ocurre si la transacción especifica `tfFillOrKill` y no se puede llenar la cantidad completa. Si la _\[enmienda ImmediateOfferKilled]\[]_ está habilitada, este código de resultado también ocurre cuando la transacción especifica `tfImmediateOrCancel` y se ejecuta sin mover fondos (anteriormente, esto devolvía `tesSUCCESS`).                                       |
 | `temBAD_EXPIRATION`      | Ocurre si la transacción contiene un campo `Expiration` que no está correctamente formateado.                                                                                                                                                                                                                                                                     |
 | `temBAD_SEQUENCE`        | Ocurre si la transacción contiene un `OfferSequence` que no está correctamente formateado o es mayor que el número de `Sequence` de la propia transacción.                                                                                                                                                                                                             |
 | `temBAD_OFFER`           | Ocurre si la Oferta intenta intercambiar XAH por XAH, o intenta intercambiar una cantidad inválida o negativa de un token.                                                                                                                                                                                                                                                 |

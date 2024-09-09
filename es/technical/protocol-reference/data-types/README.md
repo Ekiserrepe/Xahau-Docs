@@ -6,7 +6,7 @@ Las cuentas se identifican por su Address (Dirección), por ejemplo, `"r9cZA1mLK
 
 Las transacciones se identifican por un Hash del formato binario de la transacción. También puedes identificar una transacción por su cuenta de envío y el Sequence Number (Número de Secuencia).
 
-Cada ledger cerrado tiene un ledger index (índice de ledger) y un valor Hash. Al [Especificar ledgers][] puedes usar cualquiera de los dos.
+Cada ledger cerrado tiene un ledger index (índice de ledger) y un valor Hash. Al \[Especificar ledgers]\[] puedes usar cualquiera de los dos.
 
 ### Direcciones
 
@@ -45,7 +45,7 @@ Los IDs de los objetos del ledger se calculan de manera similar, pero utilizan u
 
 Muchos métodos de API requieren que especifiques una instancia del ledger, considerando que los datos recuperados están actualizados hasta esa versión particular del ledger compartido. Los comandos que aceptan una versión del ledger funcionan de la misma manera. Hay tres formas en que puedes especificar qué ledger deseas usar:
 
-1.  Especifica un ledger por su Índice de ledger en el parámetro ledger_index. Cada ledger cerrado tiene un índice de ledger que es 1 mayor que el ledger anterior. (El primer ledger tuvo un índice de ledger de 1).
+1.  Especifica un ledger por su Índice de ledger en el parámetro `ledger_index`. Cada ledger cerrado tiene un índice de ledger que es 1 mayor que el ledger anterior. (El primer ledger tuvo un índice de ledger de 1).
 
     ```
      "ledger_index": 61546724
@@ -56,7 +56,6 @@ Muchos métodos de API requieren que especifiques una instancia del ledger, cons
      "ledger_hash": "8BB204CE37CFA7A021A16B5F6143400831C4D1779E6FE538D9AC561ABBF4A929"
     ```
 3.  Especifica un ledger utilizando uno de los siguientes atajos en el parámetro `ledger_index`:
-
    * `validated` para el ledger más reciente que ha sido validado por consenso.
 
        ```
@@ -77,7 +76,7 @@ El Modo de Reporte no registra los datos del ledger hasta que se haya validado. 
 
 Hay dos tipos de divisas en Xahau: XAH y tokens. Estos dos tipos de divisas se especifican en diferentes formatos, con diferentes comportamientos de precisión y redondeo.
 
-Algunos campos, como el `Amount` de destino de una [Transacción de Payment (Pago)][], pueden ser de cualquier tipo. Algunos campos solo aceptan específicamente XAH, como el campo `Fee` (tarifa de transacción).
+Algunos campos, como el `Amount` de destino de una \[Transacción de Payment (Pago)]\[], pueden ser de cualquier tipo. Algunos campos solo aceptan específicamente XAH, como el campo `Fee` (tarifa de transacción).
 
 XAH se especifica como una cadena que contiene un número entero de "drops" de XAH, donde 1 millón de drops equivale a 1 XAH. Los tokens se especifican en su lugar como un objeto con campos para la cantidad decimal, el código de divisa y el emisor. Por ejemplo:
 

@@ -11,5 +11,5 @@ Esta página existe para que podamos rastrear los cambios solicitados por usuari
 
 ## Sugerencias
 
-* Mover/copiar HookExecutions y HookEmissions a metadata.
+* Mover/copiar HookExecutions y HookEmissions a metadata&#x20;
 * Agregar una segunda auditoría de seguridad en hooks a `Compliance`.

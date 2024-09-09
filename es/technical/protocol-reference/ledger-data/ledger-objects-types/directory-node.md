@@ -49,7 +49,7 @@ _Directorio de Propietario_
 
 ### Campos
 
-| Nombre                | Tipo JSON | \[Tipo interno]\[] | ¿Necesario? | Descripción                                                                                                                                                                                                                |
+| Nombre                | Tipo JSON | \[Tipo interno]\[] | ¿Requerido? | Descripción                                                                                                                                                                                                                |
 | ------------------- | --------- | ------------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Owner`             | String    | AccountID           | No        | (Solo en Directorios de Propietario) La dirección de la cuenta que posee los objetos en este directorio.                                                                                                                               |
 | `TakerGetsCurrency` | String    | Hash160             | No        | (Solo en Directorios de Ofertas) El código de divisa de la cantidad `TakerGets` de las ofertas en este directorio.                                                                                                                    |

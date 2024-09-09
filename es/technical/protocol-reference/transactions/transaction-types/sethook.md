@@ -97,7 +97,7 @@ JSON
 
 _Todas_ las siguientes condiciones se cumplen:
 
-* El Hook correspondiente no existe o se especifica `FLAG_OVERRIDE`.
+* El Hook correspondiente no existe _o_ se especifica `FLAG_OVERRIDE`.
 * El campo `CreateCode` se especifica, no está en blanco y contiene el código de byte WebAssembly válido para un Hook válido.
 * No existe ninguna instancia del mismo código de byte WebAssembly en XRPL. (Si lo hace y se cumplen todos los demás requisitos, entonces se interpreta como una operación de Instalación, ver a continuación).
 
@@ -308,7 +308,7 @@ JSON
 Los siguientes campos se utilizan en el objeto hook:
 
 
-| Campos            | Tipo JSON | Tipo Interno | Descripción                               |
+| Campo            | Tipo JSON | Tipo Interno | Descripción                               |
 | ---------------- | --------- | ------------- | ----------------------------------------- |
 | `HookHash`       | String    | Hash256       | El hash del hook.                     |
 | `CreateCode`     | String    | Blob          | El código WebAssembly para el hook.        |

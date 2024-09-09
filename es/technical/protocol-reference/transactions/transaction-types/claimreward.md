@@ -43,7 +43,7 @@ Las transacciones del tipo ClaimReward admiten valores adicionales en el campo `
 
 | Nombre del Flag  | Valor Hex    | Valor Decimal | Descripción                                                                                                                                                                                                           |
 | ---------- | ------------ | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `tfOptOut` | `0x00000001` | 1             | El flag `isOptOut` en el código de ClaimReward se utiliza para excluir una cuenta de recibir recompensas al eliminar los campos relacionados con recompensas del objeto de la cuenta en el ledger si el campo sfFlags en la transacción está configurado en 1. |
+| `tfOptOut` | `0x00000001` | 1             | El flag `isOptOut` en el código de ClaimReward se utiliza para excluir una cuenta de recibir recompensas al eliminar los campos relacionados con recompensas del objeto de la cuenta en el ledger si el campo `sfFlags` en la transacción está configurado en 1. |
 
 ### Coste Especial de Transacción
 

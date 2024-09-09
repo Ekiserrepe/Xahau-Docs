@@ -31,7 +31,7 @@ El objeto `FeeSettings` tiene los siguientes campos:
 | ----------------------- | --------- | ------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `BaseFee`               | String    | UInt64              | Sí       | El coste de transacción de la "transacción de referencia" en drops de XAH, en formato hexadecimal.                                                              |
 | `Flags`                 | Number    | UInt32              | Sí       | Un mapa de bits de flags booleanos habilitados para este objeto. Actualmente, el protocolo no define ningún flag para los objetos `FeeSettings`. El valor es siempre `0`. |
-| `LedgerEntryType`       | String    | UInt16              | Sí       | El valor `0x0073`, asignado a la cadena `FeeSettings`, indica que este objeto contiene la configuración de tarifas del libro mayor.                           |
+| `LedgerEntryType`       | String    | UInt16              | Sí       | El valor `0x0073`, asignado a la cadena `FeeSettings`, indica que este objeto contiene la configuración de tarifas del ledger.                           |
 | `ReferenceFeeUnits`     | Number    | UInt32              | Sí       | La `BaseFee` traducida en "unidades de tarifa".                                                                                                       |
 | `ReserveBase`           | Number    | UInt32              | Sí       | La reserva base para una cuenta en Xahau, en drops de XAH.                                                                                       |
 | `ReserveIncrement`      | Number    | UInt32              | Sí       | El incremento de la reserva para la propiedad de objetos, en drops de XAH.                                                                               |
@@ -39,7 +39,7 @@ El objeto `FeeSettings` tiene los siguientes campos:
 | `AccountCount`          | Number    | UInt32              | No        | El número de cuentas creadas en la red Xahau.                                                                                             |
 | `NetworkID`             | Number    | UInt32              | No        | El ID de la red.                                                                                                                            |
 
-**Advertencia:** El formato JSON para este tipo de objeto del libro mayor es inusual. Los campos `BaseFee`, `ReserveBase` y `ReserveIncrement` indican drops de XAH pero no en el formato habitual para\[especificar XAH]\[Currency Amount].
+**Advertencia:** El formato JSON para este tipo de objeto del libro mayor es inusual. Los campos `BaseFee`, `ReserveBase` y `ReserveIncrement` indican drops de XAH pero _**no**_ en el formato habitual para\[especificar XAH]\[Currency Amount].
 
 Si la _\[enmienda XAHFees]\[]_ está habilitada, el objeto `FeeSettings` tiene estos campos en su lugar:
 
@@ -56,7 +56,7 @@ Si la _\[enmienda XAHFees]\[]_ está habilitada, el objeto `FeeSettings` tiene e
 
 ### Formato de ID de FeeSettings
 
-El ID del objeto `FeeSettings` es el hash de la clave de espacio `FeeSettings` (`0x0065`) únicamente. Esto significa que el ID del objeto `FeeSettings` en un libro mayor es siempre:
+El ID del objeto `FeeSettings` es el hash de la clave de espacio `FeeSettings` (`0x0065`) únicamente. Esto significa que el ID del objeto `FeeSettings` en un ledger es siempre:
 
 ```
 4BC50C9B0D8515D3EAAE1E74B29A95804346C491EE1A95BF25E4AAB854A6A651

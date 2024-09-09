@@ -15,7 +15,7 @@ description: Una lista de diferencias notables entre XRP Ledger y Xahau.
 
 #### Escrow de Tokens IOU y PayChannels
 
-Xahau introduce el Escrow de Tokens IOU y PayChannels como características únicas, mejorando la flexibilidad y seguridad de las transacciones. Facilitan la retención temporal de tokens IOU bajo condiciones predefinidas (escrow) y el establecimiento de canales de pago para transacciones eficientes fuera del libro mayor.
+Xahau introduce el Escrow de Tokens IOU y PayChannels (Canales de pago) como características únicas, mejorando la flexibilidad y seguridad de las transacciones. Facilitan la retención temporal de tokens IOU bajo condiciones predefinidas (escrow) y el establecimiento de canales de pago para transacciones eficientes fuera del ledger.
 
 {% content-ref url="../features/network-features/payments.md" %}
 [payments.md](../features/network-features/payments.md)
@@ -53,7 +53,7 @@ El proceso de enmienda en Xahau tiene un marco de tiempo especificado de 5 días
 
 #### Secuencia de Inicio Diferente
 
-Xahau emplea una secuencia de inicio diferente para las cuentas que XRPL. La secuencia inicial en la cuenta es el tiempo de la época de Ripple cuando la cuenta fue creada o importada en Xahau.
+Xahau emplea una secuencia de inicio diferente para las cuentas que XRPL. La secuencia inicial en la cuenta es el tiempo de la Ripple Epoch cuando la cuenta fue creada o importada en Xahau.
 
 #### Importación / Burn 2 Mint
 

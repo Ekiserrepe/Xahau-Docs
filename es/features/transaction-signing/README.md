@@ -8,7 +8,7 @@ description: >-
 ## Diferencias principales
 
 1. Las redes habilitadas para Hooks permiten obtener definiciones de red dinámicamente. Permitiendo a los clientes adaptar los tipos de transacciones, objetos de ledger, propiedades y tipos de valores disponibles. Cuando se implementan correctamente, las librerías de firma y codificación no tienen que actualizarse cuando la red añade tipos/propiedades de transacción/objeto. <mark style=«color:blue;»>**Las librerías siguientes implementan esto y lo manejarán por ti.**</mark>
-2. Las redes habilitadas para ganchos requieren un **NetworkID** con cada transacción para evitar la repetición de transacciones en otra cadena. El **NetworkID** también será devuelto por un comando RPC `server_info` en el campo `network_id` (por ejemplo **`21338`** para Hooks V3 testnet).
+2. Las redes habilitadas para hooks requieren un **NetworkID** con cada transacción para evitar la repetición de transacciones en otra cadena. El **NetworkID** también será devuelto por un comando RPC `server_info` en el campo `network_id` (por ejemplo **`21338`** para Hooks V3 testnet).
 3. Las transacciones en una red habilitada para Hooks pueden necesitar tarifas más altas para entregar una transacción a otra cuenta, en función de los Hooks que se ejecutarán enviando desde la cuenta de envío y recibiendo en la cuenta de destino. Una tarifa razonable para satisfacer la ejecución de Hooks puede obtenerse dinámicamente de un nodo emitiendo el comando `fee` mientras se proporciona una transacción como `tx_blob`. <mark style=«color:blue;»>**Las siguientes librerías implementan esto y lo manejarán por ti.**</mark>
 
 ## Javascript/Typescript

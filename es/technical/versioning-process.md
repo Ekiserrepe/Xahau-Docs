@@ -51,8 +51,7 @@ En la rama `release`, se construye un binario que se publica en https://build.xa
 Para lanzar el código, sigue estos pasos:
 
 1. Fusiona el pull request de `candidate` en la rama release.
-Merge the `candidate` pull request into the release branch.
-2. Delete the `candidate` branch.
+2. Elimina la rama `candidate`.
 
 {% hint style="warning" %}
 Todos los merges en la rama release deben realizarse con \`git merge --ff-only candidate\`.

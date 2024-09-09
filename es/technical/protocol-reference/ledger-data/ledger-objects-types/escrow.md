@@ -4,7 +4,7 @@
 
 _(Añadido por la \[enmienda Escrow]\[].)_
 
-El tipo de objeto `Escrow` representa un pago retenido de XAH o IOU que está esperando ser ejecutado o cancelado. Una transacción de \[EscrowCreate]\[] crea un objeto `Escrow` en el libro mayor. Una transacción exitosa de \[EscrowFinish]\[] o \[EscrowCancel]\[] elimina el objeto.&#x20;
+El tipo de objeto `Escrow` representa un pago retenido de XAH o IOU que está esperando ser ejecutado o cancelado. Una \[transacción de EscrowCreate]\[] crea un objeto `Escrow` en el libro mayor. Una transacción exitosa de \[EscrowFinish]\[] o \[EscrowCancel]\[] elimina el objeto.&#x20;
 
 Si el objeto `Escrow` tiene una [_crypto-condición_](https://tools.ietf.org/html/draft-thomas-crypto-conditions-02), el pago solo puede tener éxito si una transacción de EscrowFinish proporciona el _fulfillment_ correspondiente que satisface la condición. (El único tipo de crypto-condición soportado es [PREIMAGE-SHA-256](https://tools.ietf.org/html/draft-thomas-crypto-conditions-02#section-8.1).) Si el objeto `Escrow` tiene un tiempo `FinishAfter`, el pago retenido solo puede ejecutarse después de ese tiempo.
 

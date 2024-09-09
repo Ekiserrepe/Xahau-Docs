@@ -1,6 +1,6 @@
 # Offer
 
-La función Offer (Oferta) de la red Xahau es un componente crucial del sistema de intercambio descentralizado.Permite a los usuarios crear y cancelar ofertas, facilitando un entorno de exchange dinámico y receptivo.
+La función Offer (Oferta) de la red Xahau es un componente crucial del sistema exchange descentralizado. Permite a los usuarios crear y cancelar ofertas, facilitando un entorno de exchange dinámico y receptivo.
 
 ### Tipos de transacciones
 

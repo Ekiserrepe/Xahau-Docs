@@ -9,7 +9,7 @@ description: >-
 
 _(Añadido por la \[enmienda URIToken]\[].)_
 
-The URITokenBurn transaction is used to burn a URIToken in Xahau. Burning a URIToken permanently removes it from circulation.
+La transacción URITokenBurn se utiliza para quemar un URIToken en Xahau. Quemar un URIToken lo retira permanentemente de la circulación.
 
 ### Ejemplo
 

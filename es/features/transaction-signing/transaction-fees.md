@@ -6,15 +6,15 @@ description: >-
 
 # Tarifas de transacción
 
-Mientras que las librerías pueden encargarse de la fijación de las tasas por ti (ver [.](./ "mention")), cuando construyas tus propias integraciones con el libro mayor de Xahau, puede que tengas que implementar la fijación dinámica de las tasas basándote en la transacción, la cuenta de origen y la de destino.
+Mientras que las librerías pueden encargarse de la fijación de las tarifas por ti (ver [.](./ "mention")), cuando construyas tus propias integraciones con el ledger de Xahau, puede que tengas que implementar la fijación dinámica de las tarifas basándote en la transacción, la cuenta de origen y la de destino.
 
-Como el remitente de una transacción tendrá que pagar las tasas requeridas para los Hooks invocados para el tipo de transacción específica, donde los Hooks pueden vivir tanto en la cuenta de origen como en la de destino, puedes enviar un TX Blob (firmado con una cuenta dummy) al comando `fee`, tras lo cual Xahau devolverá las tasas específicas requeridas para la transacción específica.
+Como el remitente de una transacción tendrá que pagar las tarifas requeridas para los Hooks invocados para el tipo de transacción específica, donde los Hooks pueden vivir tanto en la cuenta de origen como en la de destino, puedes enviar un TX Blob (firmado con una cuenta dummy) al comando `fee`, tras lo cual Xahau devolverá las tarifas específicas requeridas para la transacción específica.
 
 ### Ayudante RPC para las tarifas
 
-Las tasas de transacción en un libro mayor con la Enmienda de Hooks activada no son triviales de calcular para los usuarios finales y/o las aplicaciones de wallet. Esto se debe a que los hooks fuertes deben ser pagados por el originador de una transacción, y puede haber hasta 4 hooks fuertes en la cuenta emisora y 4 en la cuenta receptora, así como cualquier otro actor transaccional fuerte involucrado (como puede ser el caso de algunos tipos de transacciones exóticas). Además, si la transacción es un SetHook, el tamaño de los parámetros, el tamaño del código y si es una operación _create_ o una operación _install_ determinan el tamaño de la tarifa.
+Las tarifas de transacción en un ledger con la Enmienda de Hooks activada no son triviales de calcular para los usuarios finales y/o las aplicaciones de wallet. Esto se debe a que los hooks fuertes deben ser pagados por el originador de una transacción, y puede haber hasta 4 hooks fuertes en la cuenta emisora y 4 en la cuenta receptora, así como cualquier otro actor transaccional fuerte involucrado (como puede ser el caso de algunos tipos de transacciones exóticas). Además, si la transacción es un SetHook, el tamaño de los parámetros, el tamaño del código y si es una operación _create_ o una operación _install_ determinan el tamaño de la tarifa.
 
-Por lo tanto, se recomienda encarecidamente que **todas** las transacciones se ejecuten a través de la llamada RPC de tasa actualizada antes de que se envíen al libro mayor.
+Por lo tanto, se recomienda encarecidamente que **todas** las transacciones se ejecuten a través de la llamada RPC de tasa actualizada antes de que se envíen al ledger.
 
 #### Para invocar la llamada RPC:
 

@@ -155,7 +155,7 @@ Los códigos de campo se reutilizan para campos de diferentes tipos de campo, pe
 
 Las instrucciones de transacción pueden contener campos de cualquiera de los siguientes tipos:
 
-| Nombre del tipo | Código del tipo | Longitud en bits | ¿Prefijado con longitud? | Description                                                                                                                                                                                                  |
+| Nombre del tipo | Código del tipo | Longitud en bits | ¿Prefijado con longitud? | Descripción                                                                                                                                                                                                  |
 | --------- | --------- | ---------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | AccountID | 8         | 160        | Sí              | El identificador único para una cuenta.                                                                                                                                                                        |
 | Amount    | 6         | 64 or 384  | No               | Una cantidad de XAH o tokens. La longitud del campo es de 64 bits para XAH o 384 bits (64+160+160) para tokens.                                                                                                  |
@@ -221,9 +221,6 @@ Xahau utiliza 64 bits para serializar la cantidad numérica de un token fungible
 2. El bit de signo indica si la cantidad es positiva o negativa. A diferencia de los enteros estándar en [complemento a dos](https://en.wikipedia.org/wiki/Two's\_complement), `1` indica **positivo** en el formato de Xahau, y `0` indica negativo.
 3. Los siguientes 8 bits representan el exponente como un entero sin signo. El exponente indica la escala (a qué potencia de 10 deben multiplicarse los dígitos significativos) en el rango de -96 a +80 (inclusive). Sin embargo, al serializar, se suma 97 al exponente para que se pueda serializar como un entero sin signo. Por lo tanto, un valor serializado de `1` indica un exponente de `-96`, un valor serializado de `177` indica un exponente de 80, y así sucesivamente.
 4. Los 54 bits restantes representan los dígitos significativos (a veces llamados una mantissa) como un entero sin signo. Al serializar, este valor se normaliza al rango 1015 (`1000000000000000`) a 1016-1 (`9999999999999999`) inclusive, excepto en el caso especial del valor 0. En el caso especial de 0, el bit de signo, el exponente y los dígitos significativos son todos ceros, por lo que el valor de 64 bits se serializa como `0x8000000000000000000000000000000000000000`.
-
-
-The remaining 54 bits represent the significant digits (sometimes called a _mantissa_) as an unsigned integer. When serializing, this value is normalized to the range 1015 (`1000000000000000`) to 1016-1 (`9999999999999999`) inclusive, except for the special case of the value 0. In the special case for 0, the sign bit, exponent, and significant digits are all zeroes, so the 64-bit value is serialized as `0x8000000000000000000000000000000000000000`.
 
 La cantidad numérica se serializa junto con el código de divisa y el emisor para formar una cantidad de token completa.
 
@@ -297,7 +294,7 @@ Un PathSet se serializa como **1 a 6** rutas individuales en secuencia [\[Fuente
 
 Cada ruta consta de **1 a 8** pasos de ruta en orden [\[Fuente\]](https://github.com/XRPLF/rippled/blob/4cff94f7a4a05302bdf1a248515379da99c5bcd4/src/ripple/app/tx/impl/Payment.h#L38-L39). Cada paso comienza con un byte de **tipo**, seguido por uno o más campos que describen el paso de la ruta. El tipo indica qué campos están presentes en ese paso de ruta a través de flags bitwise. (Por ejemplo, el valor `0x30` indica cambiar tanto la divisa como el emisor.) Si hay más de un campo presente, los campos siempre se colocan en un orden específico.
 
-La siguiente tabla describe los campos posibles y las banderas bitwise que se deben configurar en el byte de tipo para indicarlos:
+La siguiente tabla describe los campos posibles y los flags bitwise que se deben configurar en el byte de tipo para indicarlos:
 
 | Tipo de Flag | Campo Presente | Tipo Campo    | Tamaño de Bits | Orden |
 | --------- | ------------- | ------------- | -------- | ----- |

@@ -1,6 +1,6 @@
 # URIToken
 
-Los URITokens son la implementación del Token No Fungible (NFT) nativo de la red Xahau. Existen como objetos on-ledger de primera clase, identificados unívocamente por el hash de su emisor y su Uniform Resource Identifier, Identificador Uniforme de Recursos (URI). Los URITokens pueden apuntar a cualquier contenido digital, existiendo sólo un objeto por URI por cuenta en el libro mayor.
+Los URITokens son la implementación del Token No Fungible (NFT) nativa de la red Xahau. Existen como objetos on-ledger de primera clase, identificados unívocamente por el hash de su emisor y su Uniform Resource Identifier, Identificador Uniforme de Recursos (URI). Los URITokens pueden apuntar a cualquier contenido digital, existiendo sólo un objeto por URI por cuenta en el libro mayor.
 
 El emisor tiene la capacidad de establecer un flag para permitir la quema del objeto en el futuro. La reserva de cada propietario también se bloquea al poseer el URIToken.
 

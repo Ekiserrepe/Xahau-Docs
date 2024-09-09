@@ -27,7 +27,7 @@ _(Añadido en la \[enmienda TicketBatch]\[].)_
 
 Si la transacción no puede crear todos los Tickets solicitados (ya sea debido al límite de 250 Tickets o a la reserva del propietario), falla y no crea ningún Ticket. Para verificar cuántos Tickets posee actualmente una cuenta, utiliza el \[método account_info]\[] y revisa el campo `account_data.TicketCount`.
 
-**Consejo:** Esta transacción aumenta el [número de secuencia][Sequence Number] de la cuenta que envía en 1 _más_ el número de tickets creados (`TicketCount`). Esta es la única transacción que aumenta el número de secuencia de una cuenta en más de 1.
+**Consejo:** Esta transacción aumenta el \[número de secuencia]\[Sequence Number] de la cuenta que envía en 1 _más_ el número de tickets creados (`TicketCount`). Esta es la única transacción que aumenta el número de secuencia de una cuenta en más de 1.
 
 ### Casos de error
 
@@ -36,5 +36,5 @@ Además de los errores que pueden ocurrir en todas las transacciones, las transa
 | Código de error                | Descripción                                                                                                                                                 |
 | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `temINVALID_COUNT`        | El campo `TicketCount` es inválido. Debe ser un entero entre 1 y 250.                                                                                    |
-| `tecDIR_FULL`             | Esta transacción causaría que la cuenta posea más del límite de 250 Tickets a la vez, o más del número máximo de objetos del libro mayor en general. |
+| `tecDIR_FULL`             | Esta transacción causaría que la cuenta posea más del límite de 250 Tickets a la vez, o más del número máximo de objetos del ledger en general. |
 | `tecINSUFFICIENT_RESERVE` | La cuenta que envía no tiene suficiente XAH para cumplir con la reserva del propietario para todos los Tickets solicitados.                                                        |

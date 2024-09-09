@@ -49,8 +49,7 @@ _(Añadido por la \[enmienda Remit]\[].)_
 | Campo            | Tipo JSON | \[Tipo Interno]\[] | Descripción                                                                                                      |
 | ---------------- | --------- | ------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | `Account`        | String    | AccountID           | La dirección de la cuenta que activará la cuenta, enviará el pago y/o acuñará/transferirá los URITokens. |
-| `Destination`    | String    | AccountID           | La dirección única de la cuenta que recibirá el pago y/o los URITokens.
-                                       |
+| `Destination`    | String    | AccountID           | La dirección única de la cuenta que recibirá el pago y/o los URITokens.                                       |
 | `DestinationTag` | Number    | UInt32              | _(Opcional)_ Un DestinationTag para depósitos en una cuenta de custodia compartida.                                          |
 | `MintURIToken`   | Object    | STObject            | _(Opcional)_ Un STObject `MintURIToken` que contiene los detalles del URIToken que deseas acuñar en la `Destination`.    |
 | `URITokenIDs`    | Array     | STArray             | _(Opcional)_ Una array de URITokenIDs (hash de 256 bits) para ser transferidos a la `Destination`. _Límite 32._       |

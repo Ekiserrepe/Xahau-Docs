@@ -1,5 +1,5 @@
 ---
-description: API para obtener información del libro mayor de Xahau
+description: API para obtener información del Xahau ledger
 ---
 
 # APIs de datos

@@ -40,10 +40,8 @@ Cada objeto `DisabledValidator` representa un validador deshabilitado. En JSON, 
 
 | Nombre                  | Tipo JSON | \[Tipo Interno]\[] | Descripción                                                              |
 | --------------------- | --------- | ------------------- | ------------------------------------------------------------------------ |
-| `FirstLedgerSequence` | Number    | UInt32              | El índice del ledger cuando el validador fue agregado a la Lista UNL Negativa.
-
-The \[ledger index]\[] when the validator was added to the Negative UNL. |
-| `PublicKey`           | String    | Blob                | The master public key of the validator, in hexadecimal.                  |
+| `FirstLedgerSequence` | Number    | UInt32              | El \[índice del ledger]\[] cuando el validador fue agregado a la Lista UNL Negativa. |
+| `PublicKey`           | String    | Blob                | La clave pública maestra del validador, en hexadecimal.                  |
 
 ### Formato de ID de NegativeUNL
 

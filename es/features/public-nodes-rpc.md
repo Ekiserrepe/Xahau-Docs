@@ -1,19 +1,18 @@
 ---
 description: >-
-  Running your own node: amazing. Hit the ground running? Use the public Xahau
-  RPC nodes.
+  Ejecutar tu propio nodo: increíble. ¿Quieres empezar de inmediato? Usa los nodos RPC públicos de Xahau.
 ---
 
-# Public Nodes (RPC)
+# Nodos Públicos (RPC)
 
 ## Mainnet (network 21337)
 
 * Websocket
   * `wss://xahau.network`
-  * `wss://xahau.org` (alias, algunos ad-blockers bloquean .network)
+  * `wss://xahau.org` (alias, algunos bloqueadores de anuncios bloquean .network)
 * HTTP POST RPC
   * `https://xahau.network`
-  * `https://xahau.org` (alias, algunos ad-blockers bloquean .network)
+  * `https://xahau.org` (alias, algunos bloqueadores de anuncios bloquean .network)
 * Definiciones de red (Codec binario, ...)
   * [`https://xahau.network/server_definitions.json`](https://xahau.network/server\_definitions.json)
 

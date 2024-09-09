@@ -5,9 +5,9 @@ description: >-
 
 # Divulgación responsable
 
-### Política de divulgación responsable
+### Política de Divulgación responsable
 
-En [XRPL Labs](https://xrpl-labs.com/) ([XUMM](https://xumm.app/)), creemos que la seguridad de nuestros sistemas es extremadamente importante.
+En [XRPL Labs](https://xrpl-labs.com/) ([Xaman](https://xaman.app/)), creemos que la seguridad de nuestros sistemas es extremadamente importante.
 
 A pesar de nuestra preocupación por la seguridad de nuestros sistemas durante el desarrollo y el mantenimiento de los productos, siempre existe la posibilidad de que alguien encuentre algo que debamos mejorar/actualizar/cambiar/arreglar/...
 
@@ -25,7 +25,7 @@ Esta política de divulgación responsable no es una invitación abierta a escan
 
 * No compartas información sobre el problema de seguridad con otras personas hasta que se resuelva el problema, y borrar inmediatamente cualquier dato confidencial adquirido.
 * No abuses aún más del problema, por ejemplo, descargando más datos de los necesarios para demostrar la fuga o para ver, borrar o modificar los datos de terceros.
-* Proporciona información detallada para que podamos reproducir, validar y resolver el problema lo antes posible. Incluya sus datos de prueba, marcas de tiempo y URL(s) de los sistemas implicados.
+* Proporciona información detallada para que podamos reproducir, validar y resolver el problema lo antes posible. Incluya tus datos de prueba, horas y URL(s) de los sistemas implicados.
 * Deja tus datos de contacto (dirección de correo electrónico y/o número de teléfono) para que podamos ponernos en contacto contigo sobre el progreso de la solución. Aceptamos denuncias anónimas.
 * No utilices ataques a la seguridad física, ingeniería social, denegación de servicio distribuida, spam o aplicaciones de terceros.
 
@@ -45,11 +45,11 @@ Esta política de divulgación responsable no es una invitación abierta a escan
 * Reportes de phising
 * Reportes de fraude
 
-Para ese tipo de quejas o reportes,, por favor [contacta con nuestro equipo de soporte](https://support.xumm.app/hc/en-us/requests/new).
+Para ese tipo de quejas o reportes, por favor [contacta con nuestro equipo de soporte](https://support.xumm.app/hc/en-us/requests/new).
 
 ### Programa de recompensa por fallos
 
-[XRPL Labs](https://xrpl-labs.com/) ([XUMM](https://xumm.app/)) fomenta la notificación de problemas de seguridad o vulnerabilidades. Podemos ofrecer una recompensa adecuada por la divulgación confidencial de cualquier problema de diseño o implementación que pudiera utilizarse para comprometer la confidencialidad o integridad de los datos de nuestros usuarios y que aún no conociéramos. Nosotros decidimos si el informe cumple los requisitos y la cuantía de la recompensa.
+[XRPL Labs](https://xrpl-labs.com/) ([Xaman](https://xaman.app/)) fomentan la notificación de problemas de seguridad o vulnerabilidades. Podemos ofrecer una recompensa adecuada por la divulgación confidencial de cualquier problema de diseño o implementación que pudiera utilizarse para comprometer la confidencialidad o integridad de los datos de nuestros usuarios y que aún no conociéramos. Nosotros decidimos si el informe cumple los requisitos y la cuantía de la recompensa.
 
 ### Exclusiones
 

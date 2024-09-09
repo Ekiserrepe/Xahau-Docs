@@ -30,7 +30,7 @@ El tipo de objeto `Amendments` contiene una lista de Enmiendas que están actual
 
 ### Campos
 
-| Nombre              | Tipo JSON | \[Tipo Interno]\[] | ¿Necesario? | Descripción                                                                                                                                                                 |
+| Nombre              | Tipo JSON | \[Tipo Interno]\[] | ¿Requerido? | Descripción                                                                                                                                                                 |
 | ----------------- | --------- | ------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Amendments`      | Array     | Vector256           | No        | Array de IDs de enmiendas de 256 bits para todas las enmiendas actualmente habilitadas. Si se omite, no hay enmiendas habilitadas.                                                           |
 | `Flags`           | Number    | UInt32              | Sí       | Un mapa de bits de flags booleanos habilitados para este objeto. Actualmente, el protocolo no define ningun flag para los objetos `Amendments`. El valor es `0`.                             |

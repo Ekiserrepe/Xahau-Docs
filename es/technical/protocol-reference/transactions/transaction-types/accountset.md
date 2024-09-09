@@ -109,7 +109,7 @@ Cuando una transacción intentaría crear una de estas entradas en el ledger, si
 
 ### TransferRate
 
-El campo TransferRate especifica una tarifa a cobrar siempre que las contrapartes transfieran la divisa que emites.
+El campo `TransferRate` especifica una tarifa a cobrar siempre que las contrapartes transfieran la divisa que emites.
 
 En las API HTTP y WebSocket, la tarifa de transferencia se representa como un entero, la cantidad que debe enviarse para que lleguen 1 mil millones de unidades. Por ejemplo, una tarifa de transferencia del 20% se representa como el valor `1200000000`. El valor no puede ser menor que `1000000000`. (Menos que eso indicaría regalar dinero por enviar transacciones, lo cual es explotable). Puedes especificar `0` como un atajo para `1000000000`, lo que significa sin tarifa.
 

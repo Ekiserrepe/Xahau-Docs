@@ -11,8 +11,8 @@ Algunos de los \[campos comunes]\[] requeridos para las transacciones normales n
 | `Account`       | String    | AccountID           | ACCOUNT\_ZERO       |
 | `Fee`           | String    | Amount              | `0`                 |
 | `Sequence`      | Number    | UInt32              | `0`                 |
-| `SigningPubKey` | String    | Blob                | `""` (Empty string) |
-| `TxnSignature`  | String    | Blob                | `""` (Empty string) |
+| `SigningPubKey` | String    | Blob                | `""` (String vacío) |
+| `TxnSignature`  | String    | Blob                | `""` (String vacío) |
 
 Las pseudo-transacciones usan los siguientes campos comunes de manera normal:
 

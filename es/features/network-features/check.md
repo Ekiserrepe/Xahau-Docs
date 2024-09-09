@@ -1,12 +1,12 @@
 # Check
 
-La función Check (Cheque) de la red Xahau es un sistema de pago diferido que permite la creación, cancelación y cobro de cheques dentro del libro mayor. Esta función está diseñada para facilitar transacciones seguras y eficientes entre las partes.
+La función Check (Cheque) de la red Xahau es un sistema de pago diferido que permite la creación, cancelación y cobro de cheques dentro del ledger. Esta función está diseñada para facilitar transacciones seguras y eficientes entre las partes.
 
 ### Tipos de transacciones
 
 #### CheckCreate
 
-La transacción `CheckCreate` se utiliza para crear un objeto Cheque en el libro mayor. Esto representa un pago aplazado que puede ser cobrado por su destino previsto.&#x20;
+La transacción `CheckCreate` se utiliza para crear un objeto Cheque en el ledger. Esto representa un pago aplazado que puede ser cobrado por su destino previsto.&#x20;
 
 {% content-ref url="../../technical/protocol-reference/transactions/transaction-types/checkcreate.md" %}
 [checkcreate.md](../../technical/protocol-reference/transactions/transaction-types/checkcreate.md)

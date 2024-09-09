@@ -1,4 +1,4 @@
-# Balance Rewards
+# Balance Rewards (Recompensas de saldo)
 
 La función Balance Rewards (Recompensas de saldo) es un aspecto único de la red Xahau que permite a los usuarios acumular y reclamar recompensas en función del saldo de su cuenta. Esta función se implementa mediante una combinación de código nativo (Enmienda BalanceRewards) y código hook (Hook de rGenesis Account's Reward).
 

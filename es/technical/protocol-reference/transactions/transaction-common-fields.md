@@ -21,13 +21,13 @@ Cada transacción tiene un conjunto de campos comunes, además de campos adicion
 | `EmitDetails`        | Object           | Object              | Contiene detalles sobre la emisión. Esto incluye la generación de la emisión, la carga de la emisión, la dirección de callback, el hash del hook que emitió la transacción, el nonce de la emisión y el ID de la transacción principal.                                                                                   |
 | `HookParameters`     | Array            | Array               | Los parámetros del gancho de la transacción.                                                                                                                                                                                                                                                                                                             |
 
-\[Eliminado en: rippled 0.28.0]\[]: El campo `PreviousTxnID` de las transacciones fue reemplazado por el campo `AccountTxnID`. Este campo String / Hash256 está presente en algunas transacciones históricas. Esto no está relacionado con el campo también llamado `PreviousTxnID` en algunos objetos del libro mayor.
+\[Eliminado en: rippled 0.28.0]\[]: El campo `PreviousTxnID` de las transacciones fue reemplazado por el campo `AccountTxnID`. Este campo String / Hash256 está presente en algunas transacciones históricas. Esto no está relacionado con el campo también llamado `PreviousTxnID` en algunos objetos del ledger.
 
 ### AccountTxnID
 
 El campo `AccountTxnID` te permite encadenar tus transacciones, de modo que una transacción actual no sea válida a menos que la transacción anterior enviada desde la misma cuenta tenga un \[hash de transacción]\[hash identificador] específico.
 
-A diferencia del campo `PreviousTxnID`, que rastrea la última transacción que _modificó_ una cuenta (independientemente del remitente), el `AccountTxnID` rastrea la última transacción _enviada por_ una cuenta. Para usar `AccountTxnID`, primero debes habilitar el flag `asfAccountTxnID`, para que el libro mayor rastree el ID de la transacción anterior de la cuenta. (`PreviousTxnID`, en comparación, siempre se rastrea).
+A diferencia del campo `PreviousTxnID`, que rastrea la última transacción que _modificó_ una cuenta (independientemente del remitente), el `AccountTxnID` rastrea la última transacción _enviada por_ una cuenta. Para usar `AccountTxnID`, primero debes habilitar el flag `asfAccountTxnID`, para que el ledger rastree el ID de la transacción anterior de la cuenta. (`PreviousTxnID`, en comparación, siempre se rastrea).
 
 Una situación en la que esto es útil es si tienes un sistema primario para enviar transacciones y un sistema de respaldo pasivo. Si el sistema de respaldo pasivo se desconecta del primario, pero el primario no está completamente muerto, y ambos comienzan a operar al mismo tiempo, podrías tener problemas graves como que algunas transacciones se envíen dos veces y otras no se envíen en absoluto. Encadenar tus transacciones con `AccountTxnID` asegura que, incluso si ambos sistemas están activos, solo uno de ellos puede enviar transacciones válidas a la vez.
 
@@ -62,7 +62,7 @@ El único flag que se aplica globalmente a todas las transacciones es el siguien
 
 | Nombre Flag             | Valor Hex    | Valor Decimal | Descripción                                                                                                                                 |
 | --------------------- | ------------ | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `tfFullyCanonicalSig` | `0x80000000` | 2147483648    | **DEPRECATED** Sin efecto. (Si la \[enmienda RequireFullyCanonicalSig]\[] no está habilitada, este flag obliga a una firma totalmente canónica.) |
+| `tfFullyCanonicalSig` | `0x80000000` | 2147483648    | **OBSOLETO** Sin efecto. (Si la \[enmienda RequireFullyCanonicalSig]\[] no está habilitada, este flag obliga a una firma totalmente canónica.) |
 
 Al usar el \[método sign]\[] (o el \[método submit]\[] en modo "sign-and-submit"), `xahaud` agrega un campo `Flags` con `tfFullyCanonicalSig` habilitado a menos que el campo `Flags` ya esté presente. El flag `tfFullyCanonicalSig` no se habilita automáticamente si `Flags` se especifica explícitamente. El flag no se habilita automáticamente al usar el \[método sign\_for]\[] para agregar una firma a una transacción firmada múltiples veces.
 
@@ -79,7 +79,7 @@ El campo `Flags` de una transacción puede contener flags que se aplican en dife
 | Flags reservados   | `0x0000ffff` | Flags que no están actualmente definidos. Una transacción solo es válida si estos flags están deshabilitados.
  |
 
-**Nota:** El tipo de \[transacción AccountSet]\[] tiene sus propios flags no basados en bits, que cumplen una función similar a los flags basados en tipo. Los objetos del libro mayor también tienen un campo `Flags` con diferentes definiciones de flags basados en bits.
+**Nota:** El tipo de \[transacción AccountSet]\[] tiene sus propios flags no basados en bits, que cumplen una función similar a los flags basados en tipo. Los objetos del ledger también tienen un campo `Flags` con diferentes definiciones de flags basados en bits.
 
 ### Campo Memos
 
@@ -137,7 +137,7 @@ Los ataques de repetición de transacciones son teóricamente posibles, pero req
 
 * El remitente de la transacción es una cuenta financiada en la segunda red.
 * El número de `Sequence` del remitente en la segunda red coincide con el `Sequence` de la transacción, o la transacción utiliza un Ticket que está disponible en la segunda red.
-* La transacción no tiene un campo `LastLedgerSequence`, o especifica un valor que es más alto que el índice del libro mayor actual en el segundo libro mayor.
+* La transacción no tiene un campo `LastLedgerSequence`, o especifica un valor que es más alto que el índice del ledger actual en el segundo ledger.
   * Mainnet generalmente tiene un índice de ledger más alto que las redes de prueba o cadenas laterales, por lo que es más fácil repetir transacciones de Mainnet en una cadena lateral o red de prueba que al revés, cuando las transacciones utilizan `LastLedgerSequence` según lo previsto.
 * Ambas redes tienen IDs de 1024 o menos, ambas redes utilizan el mismo ID, o la segunda red no requiere el campo `NetworkID`.
 
@@ -151,13 +151,13 @@ El campo `Signers` contiene una firma múltiple, que tiene firmas de hasta 8 par
 | `TxnSignature`  | String | Blob                | Una firma para esta transacción, verificable usando la `SigningPubKey`.       |
 | `SigningPubKey` | String | Blob                | La clave pública utilizada para crear esta firma.                                 |
 
-La `SigningPubKey` debe ser una clave que esté asociada con la dirección `Account`. Si la dirección `Account` referenciada es una cuenta financiada en el libro mayor, entonces la `SigningPubKey` puede ser la Clave Regular actual de esa cuenta si está configurada. También podría ser la Clave Maestra de esa cuenta, a menos que el flag `lsfDisableMaster` esté habilitada. Si la dirección `Account` referenciada no es una cuenta financiada en el ledger, entonces la `SigningPubKey` debe ser la clave maestra asociada con esa dirección.
+La `SigningPubKey` debe ser una clave que esté asociada con la dirección `Account`. Si la dirección `Account` referenciada es una cuenta financiada en el ledger, entonces la `SigningPubKey` puede ser la Clave Regular actual de esa cuenta si está configurada. También podría ser la Clave Maestra de esa cuenta, a menos que el flag `lsfDisableMaster` esté habilitada. Si la dirección `Account` referenciada no es una cuenta financiada en el ledger, entonces la `SigningPubKey` debe ser la clave maestra asociada con esa dirección.
 
 Debido a que la verificación de firmas es una tarea intensiva en computación, las transacciones firmadas múltiples cuestan XAH adicional para retransmitirse a la red. Cada firma incluida en la firma múltiple aumenta el \[coste de transacción]\[] requerido para la transacción. Por ejemplo, si el costo mínimo actual de transacción para retransmitir una transacción a la red es de `10000` drops, entonces una transacción firmada múltiples veces con 3 entradas en el array `Signers` necesitaría un valor de `Fee` de al menos `40000` drops para retransmitirse.
 
 ### Campos EmitDetails
 
-Un objeto EmitDetails tiene los siguientes campos:
+Un objeto `EmitDetails` tiene los siguientes campos:
 
 | Campo             | Tipo JSON | \[Tipo Interno]\[] | ¿Requerido? | Descripción                                                                                                                                                                                                                                                                     |
 | ----------------- | --------- | ------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -170,7 +170,7 @@ Un objeto EmitDetails tiene los siguientes campos:
 
 ### Parámetros Hook
 
-El campo `HookParameters` es un array de objetos que especifican los parámetros del gancho. Cada objeto de parámetro tiene los siguientes campos:
+El campo `HookParameters` es un array de objetos que especifican los parámetros del hook. Cada objeto de parámetro tiene los siguientes campos:
 
 | Campo   | Tipo JSON | Tipo Interno | Descripción                 |
 | ------- | --------- | ------------- | --------------------------- |

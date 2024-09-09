@@ -4,7 +4,7 @@
 
 _(Añadido por la \[enmienda MultiSign]\[].)_
 
-El tipo de objeto `SignerList` representa una lista de partes que, como grupo, están autorizadas para firmar una transacción en lugar de una cuenta individual. Puedes crear, reemplazar o eliminar una lista de firmantes utilizando una transacción \[SignerListSet]\[].
+El tipo de objeto `SignerList` representa una lista de partes que, como grupo, están autorizadas para firmar una transacción en lugar de una cuenta individual. Puedes crear, reemplazar o eliminar una lista de firmantes utilizando una \[transacción SignerListSet]\[].
 
 ### Ejemplo JSON
 
@@ -68,7 +68,7 @@ Cada miembro del campo `SignerEntries` es un objeto que describe a ese firmante 
 | `SignerWeight`  | Number    | UInt16        | El peso de una firma de este firmante. Una firma múltiple solo es válida si la suma de pesos de las firmas proporcionadas cumple o excede el valor del `SignerQuorum` de la lista de firmantes. |
 | `WalletLocator` | String    | Hash256       | _(Opcional)_ Datos hexadecimales arbitrarios. Esto se puede usar para identificar al firmante o para otros propósitos relacionados. _(Añadido por la \[enmienda ExpandedSignerList]\[])_.             |
 
-Al procesar una transacción con firma múltiple, el servidor busca los valores `Account` con respecto al ledger en el momento de la ejecución de la transacción. Si la dirección _no_ corresponde a un objeto AccountRoot financiado, entonces solo la clave privada maestra asociada con esa dirección puede usarse para producir una firma válida. Si la cuenta existe en el ledger, entonces depende del estado de esa cuenta. Si la cuenta tiene configurada una Clave Regular, se puede usar la Clave Regular. La clave maestra de la cuenta solo puede usarse si no está deshabilitada. Una firma múltiple no se puede usar como parte de otra firma múltiple.
+Al procesar una transacción con firma múltiple, el servidor busca los valores `Account` con respecto al ledger en el momento de la ejecución de la transacción. Si la dirección _no_ corresponde a un objeto AccountRoot financiado, entonces solo la clave privada maestra asociada con esa dirección puede usarse para producir una firma válida. Si la cuenta _existe_ en el ledger, entonces depende del estado de esa cuenta. Si la cuenta tiene configurada una Clave Regular, se puede usar la Clave Regular. La clave maestra de la cuenta solo puede usarse si no está deshabilitada. Una firma múltiple no se puede usar como parte de otra firma múltiple.
 
 ### Flags de \{{currentpage.name\}}
 

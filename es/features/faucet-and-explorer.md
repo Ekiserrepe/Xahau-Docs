@@ -1,4 +1,4 @@
-# Faucet & Explorers
+# Faucet & Exploradores
 
 El faucet (grifo) de Xahau y exploradores pueden ser encontrados aquí:
 
